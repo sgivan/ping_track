@@ -27,8 +27,11 @@ use Getopt::Long; # use GetOptions function to for CL args
 use warnings;
 use strict;
 use Net::Ping;
+use Statistics::Descriptive;
+use DateTime;
 
 my $remote_host = '8.8.8.8';
+my $count = 20;
 
 my ($debug,$verbose,$help);
 
@@ -45,8 +48,36 @@ if ($help) {
 
 my $p = Net::Ping->new('external');
 $p->hires();
-my ($ret,$duration,$ip) = $p->ping($remote_host);
-say "ret: '$ret', duration: '$duration', ip: '$ip'";
+my $stats = Statistics::Descriptive::Sparse->new();
+$stats->clear();
+
+my $dt = DateTime->now();
+$dt->set_time_zone('America/Chicago');
+say "\n$dt";
+
+my ($alive,$dead) = (0,0);
+
+for (my $n = 0; $n < $count; ++$n) {
+    if(my ($ret,$duration,$ip) = $p->ping($remote_host)) {
+        if ($ret) {
+            ++$alive;
+        } else {
+            ++$dead;
+        }
+        say "ret: '$ret', duration: '$duration', ip: '$ip'";
+        $stats->add_data($duration);
+    } else {
+        say "unknown error";
+    }
+}
+
+say "time: $dt, alive: $alive, dead: $dead, duration: ", $stats->mean();
+
+open(OUT,">>","stats.txt");
+
+say OUT "$dt\t$alive\t$dead\t", $stats->mean();
+
+close(OUT);
 
 if ($p->ping($remote_host)) {
     say "$remote_host is alive";
