@@ -79,11 +79,11 @@ say OUT "$dt\t$alive\t$dead\t", $stats->mean();
 
 close(OUT);
 
-if ($p->ping($remote_host)) {
-    say "$remote_host is alive";
-} else {
-    say "$remote_host is dead";
-}
+#if ($p->ping($remote_host)) {
+#    say "$remote_host is alive";
+#} else {
+#    say "$remote_host is dead";
+#}
 
 $p->close();
 
