@@ -46,6 +46,12 @@ if ($help) {
     exit(0);
 }
 
+if (!-e 'stats.txt') {
+    open(my $STATS,'>','stats.txt');
+    say $STATS "Timecode\tSuccess\tFail\tavgTime";
+    close($STATS);
+}
+
 my $p = Net::Ping->new('external');
 $p->hires();
 my $stats = Statistics::Descriptive::Sparse->new();
