@@ -1,0 +1,29 @@
+screen -ls
+myscreen SAB
+cd projects/ping_track/
+cd bin
+ll
+tail -f stats.txt 
+ssh stahl
+stahl
+pwd
+ll
+tail stats.txt 
+tail -f stats.txt 
+cd ..
+ll
+mkdir R
+cd R
+ll
+cp ../bin/stats.txt ./
+ll
+which R
+R
+head stats.txt 
+vim stats.txt 
+R
+vim stats.txt 
+R
+whichscreen
+tmux ls
+tmux attach -t ping
