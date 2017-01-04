@@ -33,9 +33,10 @@ use DateTime;
 my $remote_host = '8.8.8.8';
 my $count = 20;
 
-my ($debug,$verbose,$help);
+my ($debug,$verbose,$help,$quiet);
 
 my $result = GetOptions(
+    "quiet"     =>  \$quiet,
     "debug"     =>  \$debug,
     "verbose"   =>  \$verbose,
     "help"      =>  \$help,
@@ -59,7 +60,7 @@ $stats->clear();
 
 my $dt = DateTime->now();
 $dt->set_time_zone('America/Chicago');
-say "\n$dt";
+say "\n$dt" unless ($quiet);
 
 my ($alive,$dead) = (0,0);
 
@@ -70,20 +71,20 @@ for (my $n = 0; $n < $count; ++$n) {
         } else {
             ++$dead;
         }
-        say "ret: '$ret', duration: '$duration', ip: '$ip'";
+        say "ret: '$ret', duration: '$duration', ip: '$ip'" unless ($quiet);
         $stats->add_data($duration);
     } else {
         say "unknown error";
     }
 }
 
-say "time: $dt, alive: $alive, dead: $dead, duration: ", $stats->mean();
+say "time: $dt, alive: $alive, dead: $dead, duration: ", $stats->mean() unless ($quiet);
 
-open(OUT,">>","stats.txt");
+open(my $OUT,">>","stats.txt");
 
-say OUT "$dt\t$alive\t$dead\t", $stats->mean();
+say $OUT "$dt\t$alive\t$dead\t", $stats->mean();
 
-close(OUT);
+close($OUT);
 
 #if ($p->ping($remote_host)) {
 #    say "$remote_host is alive";
