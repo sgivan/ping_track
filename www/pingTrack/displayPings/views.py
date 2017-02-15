@@ -2,17 +2,23 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
 from django.utils import timezone
+from django.http import Http404
 
 
 # Create your views here.
 def index(request):
     today_date = timezone.now()
     template = loader.get_template('polls/index.html')
-    context = {
-            'current_date' : today_date,
-            }
-    return HttpResponse(template.render(context,request))
+    context = { 'current_date' : today_date }
+#    return HttpResponse(template.render(context,request))
+    return render(request, 'polls/index.html', context)
 
 def testme(request):
     return HttpResponse("<h1>This is a test</h1>")
+
+def page404(request):
+    raise Http404('Page does not exist')
+
+def plotMe(request):
+    return HttpResponse('This is the plotMe page')
 
