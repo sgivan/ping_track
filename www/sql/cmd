@@ -1,1 +1,1 @@
-mysqldump --user pingTrackuser --password=H2HugzbO pingTrack --opt > pingTrack.sql
+mysqldump --opt --user pingTrackuser --password=H2HugzbO pingTrack > pingTrack.sql
