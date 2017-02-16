@@ -27,3 +27,268 @@ R
 whichscreen
 tmux ls
 tmux attach -t ping
+pwd
+cd projects/ping_track/R/
+ll
+ls -la
+cat .Rhistory 
+head statts.t
+head stats.txt 
+vim stats.txt 
+pwd
+R
+ll
+cd ..
+ll
+git status
+cd R
+ll
+ls -la
+ln -s .RData RData
+ll
+ls -la
+ln -s .Rhistory Rhistory
+ll
+cd ..
+git status
+git add R/.RData
+git status
+git add R/*
+git status
+git add R/.Rhistory 
+git status
+git diff bin/ping_track.pl
+git commit -m 'Started working on R code to generate plots.'
+git status
+git remote -v
+git add bin/ping_track.pl 
+git commit -m 'Add header to stats file.'
+git status
+git push github
+git remote -v
+git branch
+git push --set-upstream github master
+git pull github
+git pull github master
+ll
+ll bin
+cd bin
+vim ping_track.pl 
+git status
+git push github
+git push --set-upstream github master
+git status
+cd bin
+ll
+tail stats.txt
+cd ..
+ll
+ll share/
+ll test/
+ll
+cd R/
+R
+ll
+R
+ll
+vim Rhistory_plotting.txt 
+which Rscript
+man Rscript
+ll
+which Rscript
+ll
+vim -p make_scatterplot.R Rhistory_plotting.txt 
+ll
+chmod +x make_scatterplot.R 
+./make_scatterplot.R 
+Rscript -h
+Rscript 
+Rscript --no-site-file make_scatterplot.R 
+vim make_scatterplot.R 
+Rscript --no-site-file make_scatterplot.R 
+vim make_scatterplot.R 
+R
+cd projects/ping_track/R/
+ll
+?png
+pwd
+ll
+vim make_scatterplot.R 
+./make_scatterplot.R 
+vim make_scatterplot.R 
+./make_scatterplot.R 
+vim make_scatterplot.R 
+./make_scatterplot.R 
+ll
+display Rplot001.png 
+vim make_scatterplot.R 
+./make_scatterplot.R 
+ll
+display Rplot001.png 
+vim make_scatterplot.R 
+./make_scatterplot.R 
+rm Rplot001.png 
+vim make_scatterplot.R 
+./make_scatterplot.R 
+ll
+rm Rplot001.png 
+./make_scatterplot.R 
+ll
+display Rplot001.png 
+./make_scatterplot.R 
+display Rplot001.png 
+git status
+git add make_scatterplot.R 
+git diff make_scatterplot.R
+git commit -m 'working version'
+git push github
+./make_scatterplot.R 
+display Rplot001.png 
+./make_scatterplot.R 
+display Rplot001.png 
+./make_scatterplot.R 
+display Rplot001.png 
+git status
+./make_scatterplot.R ' >>  cmd
+display Rplot001.png ' >> cmd
+ll
+echo './make_scatterplot.R ' >>  cmd
+echo 'display Rplot001.png ' >> cmd
+ll
+sh cmd
+cd projects/ping_track/
+ll
+cd R/
+ll
+./make_scatterplot.R 
+display Rplot001.png 
+display Rplot002.png 
+git status
+git add make_scatterplot.R 
+git commit -m 'Generate two plots'
+git remote -v
+git push github
+cd projects/ping_track/bin/
+cd ../R
+ll
+./make_scatterplot.R 
+ll
+display Rplot002.png 
+display Rplot001.png 
+exit
+cd projects/ping_track/R/
+ll
+./make_scatterplot.R 
+display Rplot001.png 
+display Rplot002.png 
+display Rplot003.png 
+stahl
+ll
+./make_scatterplot.R 
+ll
+cd projects/ping_track/R/
+ll
+./make_scatterplot.R 
+ll
+./make_scatterplot.R 
+which view
+which xvie
+view *.png
+display *.png
+ll
+./make_scatterplot.R 
+ll
+display *.png
+tmux ls
+sudo netstat
+sudo netstat | grep 10.0.0.1
+man netstat
+netstat --tcp
+scoober
+stahl
+netstat --tcp
+stahl
+ping 10.1.1.1
+ping 10.0.0.1
+cd projects/
+ll
+cd ping_track/
+ll
+cd R
+ll
+stahl
+ping 8.8.8.8
+stahl
+scoober
+stahl
+exit
+cd Music_mp3/
+ll
+cd Music/Dire\ Straits/Dire\ Straits\ Live\ Alchemy/
+ll
+ffprobe 1-01\ Once\ Upon\ a\ Time\ in\ the\ West.mp3 
+cd ../
+pwd
+cd ../../
+ll
+cd ../Music2/
+ll
+cd Dire\ Straits/Dire\ Straits\ Live\ Alchemy/
+ll
+ll ~/projects/audprocess/bin/
+~/projects/audprocess/bin/convert_all_flac_to_mp3.sh 
+ll
+mv *.mp3 ~/Music/Dire\ Straits/Dire\ Straits\ Live\ Alchemy/
+cd ~/Music/Dire\ Straits/Dire\ Straits\ Live\ Alchemy/
+ll
+rm *.m4a
+ll
+pwd
+cat /etc/auto.mnt.nfs
+cd /mnt/bucket01
+ll /mnt/
+ll /mnt/nfs/bucket01
+cd /mnt/nfs/
+ll
+cd bucket01
+cd ..
+ll
+ll scoober/bucket01/
+cd scoober/bucket01/hof
+cd scoober/bucket01/
+ll
+scoober
+pwd
+cd data/hof
+sudo systemctl status autofs
+ll /etc/auto.*
+cat /etc/auto.misc 
+ll
+cd /mnt/nfs/home
+sudo systemctl status autofs
+grep bucket01 /etc/auto.*
+which adduser
+man adduser
+sudo useradd piper
+finger piper
+sudo passwd piper
+ssh -p 734 sgadmin@dayhoff.ircf.missouri.edu
+cd ~/projects/ping_track/R
+ll
+./make_scatterplot.R 
+display Rplot00*.png
+cd projects/ping_track/
+ll
+cd R/
+ll
+crontab -e
+ll
+ll ../bin/
+./make_scatterplot.R 
+ll
+view Rplot00*.png
+man view
+which convert
+man convert
+man ImageMagick
+display Rplot00*.png
