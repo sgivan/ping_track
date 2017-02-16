@@ -23,3 +23,35 @@ plot(main="Failures in Last Week",dates[[1]][(length(dates[[1]])-5040):length(da
 par(lab=c(10,5,7));
 plot(main="Failures in Last Month",dates[[1]][(length(dates[[1]])-21600):length(dates[[1]])],data['Fail'][[1]][(length(dates[[1]])-21600):length(dates[[1]])]/20,col="blue",type="p",xlab="Day",ylab="Failures/Attempts")
 #dev.off()
+#
+# copy files to www app
+#
+cpfile <- function(filename) {
+	print(filename)
+	if (file.exists(filename)) {
+		cat("'", filename, "' exists\n")	
+		newfilename = paste0(destdir, filename)
+		print(paste0("new file name: '", newfilename, "'"))
+	}
+}
+destdir <- "../www/pingTrack/displayPings/static/"
+pngfiles <- c('Rplot001.png', 'Rplot002.png', 'Rplot003.png', 'Rplot004.png')
+
+rtn <- lapply(pngfiles, cpfile)
+
+#for (filename in pngfiles) {
+#	print(filename)
+#	if (file.exists(filename)) {
+#		cat("'", filename, "' exists\n")	
+#		newfilename = paste(c(destdir, filename),'')
+#		cat("new file name: '", newfilename, "'\n")
+#	}
+#}
+# if file exists
+
+#if (file.exists("Rplot001.png")) 
+
+# copy to web app
+
+# endif
+
