@@ -32,26 +32,16 @@ cpfile <- function(filename) {
 		cat("'", filename, "' exists\n")	
 		newfilename = paste0(destdir, filename)
 		print(paste0("new file name: '", newfilename, "'"))
+        if (file.exists(newfilename)) {
+            file.remove(newfilename)
+        }
+        #rtn <- file.copy(filename,newfilename,overwrite=TRUE,copy.date=TRUE)
+        rtn <- file.copy(filename,newfilename)
+        print(paste0("return value: '", rtn, "'"))
 	}
 }
 destdir <- "../www/pingTrack/displayPings/static/"
-pngfiles <- c('Rplot001.png', 'Rplot002.png', 'Rplot003.png', 'Rplot004.png')
+pngfiles <- c('Rplot001.png', 'Rplot002.png', 'Rplot003.png', 'Rplot004.png', 'Rplot005.png')
 
 rtn <- lapply(pngfiles, cpfile)
-
-#for (filename in pngfiles) {
-#	print(filename)
-#	if (file.exists(filename)) {
-#		cat("'", filename, "' exists\n")	
-#		newfilename = paste(c(destdir, filename),'')
-#		cat("new file name: '", newfilename, "'\n")
-#	}
-#}
-# if file exists
-
-#if (file.exists("Rplot001.png")) 
-
-# copy to web app
-
-# endif
 
