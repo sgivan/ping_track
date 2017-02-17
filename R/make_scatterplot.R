@@ -28,6 +28,7 @@ plot(main="Failures in Last Month",dates[[1]][(length(dates[[1]])-21600):length(
 #
 cpfile <- function(filename) {
 	print(filename)
+    destdir <- "../www/pingTrack/displayPings/static/"
 	if (file.exists(filename)) {
 		cat("'", filename, "' exists\n")	
 		newfilename = paste0(destdir, filename)
@@ -37,11 +38,31 @@ cpfile <- function(filename) {
         }
         #rtn <- file.copy(filename,newfilename,overwrite=TRUE,copy.date=TRUE)
         rtn <- file.copy(filename,newfilename)
+        #rtn <- file.symlink(newfilename,filename)
         print(paste0("return value: '", rtn, "'"))
 	}
 }
-destdir <- "../www/pingTrack/displayPings/static/"
-pngfiles <- c('Rplot001.png', 'Rplot002.png', 'Rplot003.png', 'Rplot004.png', 'Rplot005.png')
 
-rtn <- lapply(pngfiles, cpfile)
+symlinkfile <- function(filename) {
+    print(filename)
+    destdir <- "../www/pingTrack/displayPings/static/"
+	if (file.exists(filename)) {
+		cat("'", filename, "' exists\n")	
+        setwd(destdir)
+        if (file.exists(filename)) {
+            #file.remove(filename)
+            unlink(filename)
+        }
+        file.symlink(paste0("../../../../R/",filename),filename)
+        setwd("../../../../R")
+    }
+}
+
+
+
+#destdir <- "../www/pingTrack/displayPings/static/"
+pngfiles <- c('Rplot001.png', 'Rplot002.png', 'Rplot003.png', 'Rplot004.png')
+
+#rtn <- lapply(pngfiles, cpfile)
+rtn <- lapply(pngfiles, symlinkfile)
 
