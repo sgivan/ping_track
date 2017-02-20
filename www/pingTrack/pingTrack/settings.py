@@ -25,7 +25,7 @@ SECRET_KEY = 's%rpk=hre&o0r64pm1)2i7a7)p5aeec&g0oda+a&rn2(d4qa+n'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['localhost', u'genomeogenesis.com']
 
 
 # Application definition
@@ -124,6 +124,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
+STATIC_ROOT = '/mnt/home/sgivan/projects/ping_track/www/pingTrack/static'
 STATIC_URL = '/static/'
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
