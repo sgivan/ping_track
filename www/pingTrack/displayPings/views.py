@@ -8,10 +8,10 @@ from django.http import Http404
 # Create your views here.
 def index(request):
     today_date = timezone.now()
-    template = loader.get_template('polls/index.html')
+    template = loader.get_template('displayPings/index.html')
     context = { 'current_date' : today_date }
 #    return HttpResponse(template.render(context,request))
-    return render(request, 'polls/index.html', context)
+    return render(request, 'displayPings/index.html', context)
 
 def testme(request):
     return HttpResponse("<h1>This is a test</h1>")

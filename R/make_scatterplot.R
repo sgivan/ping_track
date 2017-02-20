@@ -9,13 +9,15 @@ ldate
 }
 dates <- lapply(data[1],to_date)
 
+#dates[[1]][(length(dates[[1]])-29):length(dates[[1]])]
+
 png(filename="Rplot%03d.png",width=1440,heigh=720)
 par(lab=c(10,5,7));
 # plot last hour
 plot(
      main="Failures in Last Hour",
-     dates[[1]][(length(dates[[1]])-30):length(dates[[1]])],
-     data['Fail'][[1]][(length(dates[[1]])-30):length(dates[[1]])]/20,
+     dates[[1]][(length(dates[[1]])-29):length(dates[[1]])],
+     data['Fail'][[1]][(length(dates[[1]])-29):length(dates[[1]])]/20,
      col="blue",
      type="p",
      xlab="Minutes",
@@ -82,7 +84,7 @@ cpfile <- function(filename) {
 # instead of copying files, symlink them
 symlinkfile <- function(filename) {
     #print(filename)
-    destdir <- "../www/pingTrack/displayPings/static/"
+    destdir <- "../www/pingTrack/displayPings/static/displayPings/"
 	if (file.exists(filename)) {
 		#cat("'", filename, "' exists\n")	
         setwd(destdir)
@@ -90,8 +92,8 @@ symlinkfile <- function(filename) {
             #file.remove(filename)
             unlink(filename)
         }
-        file.symlink(paste0("../../../../R/",filename),filename)
-        setwd("../../../../R")
+        file.symlink(paste0("../../../../../R/",filename),filename)
+        setwd("../../../../../R")
     }
 }
 

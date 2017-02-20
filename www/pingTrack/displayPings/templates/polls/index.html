@@ -4,26 +4,31 @@
 
 {% load staticfiles %}
 
-<div style="display: inline; float: left;">
-<h3>Failures during the Last Hour</h3>
+<div style="display: flex; flex-direction: row; color: silver; width: 1200px; flex-wrap: wrap;">
 
-<a href="{% static "Rplot001.png" %}"><img style="height: 300px;" src="{% static "Rplot001.png" %}" alt="ping track data for the last hour" /></a>
+    <div>
+        <h3>Failures during the Last Hour</h3>
+
+        <a href="{% static "Rplot001.png" %}"><img style="height: 300px;" src="{% static "Rplot001.png" %}" alt="ping track data for the last hour" /></a>
+    </div>
+
+    <div>
+        <h3>Failures during the Last 24 Hours</h3>
+
+        <a href="{% static "Rplot002.png" %}"><img style="height: 300px;" src="{% static "Rplot002.png" %}" alt="ping track data for the last 24 hours" /></a>
+    </div>
+
+
+    <div>
+        <h3>Failures during the Last Week</h3>
+
+        <a href="{% static "Rplot003.png" %}"><img style="height: 300px;" src="{% static "Rplot003.png" %}" alt="ping track data for the last week" /></a>
+    </div>
+
+    <div>
+        <h3>Failures during the Last Month</h3>
+
+        <a href="{% static "Rplot004.png" %}"><img style="height: 300px;" src="{% static "Rplot004.png" %}" alt="ping track data for the last month" /></a>
+    </div>
 </div>
 
-<div style="display: inline; float: right;">
-<h3>Failures during the Last 24 Hours</h3>
-
-<a href="{% static "Rplot002.png" %}"><img style="height: 300px;" src="{% static "Rplot002.png" %}" alt="ping track data for the last 24 hours" /></a>
-</div>
-
-<div style="display: inline; float: left;">
-<h3>Failures during the Last Week</h3>
-
-<a href="{% static "Rplot003.png" %}"><img style="height: 300px;" src="{% static "Rplot003.png" %}" alt="ping track data for the last week" /></a>
-</div>
-
-<div style="display: inline; float: right;">
-<h3>Failures during the Last Month</h3>
-
-<a href="{% static "Rplot004.png" %}"><img style="height: 300px;" src="{% static "Rplot004.png" %}" alt="ping track data for the last month" /></a>
-</div>
