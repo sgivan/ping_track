@@ -1,0 +1,36 @@
+<h1>Latest Ping Track Images</h1>
+
+<p>As of {{ current_date }}</p>
+
+{% load staticfiles %}
+
+<div style="display: grid; grid-template-columns: 1fr 1fr;">
+
+    <h2>title 1</h2>
+    <h2>title 2</h2>
+</div>
+<!--
+    <div style="width: 200px;">
+        <h3>Failures during the Last Hour</h3>
+
+        <a href="{% static "Rplot001.png" %}"><img style="height: 300px;" src="{% static "Rplot001.png" %}" alt="ping track data for the last hour" /></a>
+    </div>
+
+    <div style="width: 200px">
+        <h3>Failures during the Last 24 Hours</h3>
+
+        <a href="{% static "Rplot002.png" %}"><img style="height: 300px;" src="{% static "Rplot002.png" %}" alt="ping track data for the last 24 hours" /></a>
+    </div>
+    <div>
+        <h3>Failures during the Last Week</h3>
+
+        <a href="{% static "Rplot003.png" %}"><img style="height: 300px;" src="{% static "Rplot003.png" %}" alt="ping track data for the last week" /></a>
+    </div>
+
+    <div>
+        <h3>Failures during the Last Month</h3>
+
+        <a href="{% static "Rplot004.png" %}"><img style="height: 300px;" src="{% static "Rplot004.png" %}" alt="ping track data for the last month" /></a>
+    </div>
+</div>
+-->
