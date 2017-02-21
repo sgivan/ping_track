@@ -13,6 +13,9 @@ def index(request):
 #    return HttpResponse(template.render(context,request))
     return render(request, 'displayPings/index.html', context)
 
+def methodology(request):
+    return render(request, 'displayPings/methodology.html')
+
 def testme(request):
     return HttpResponse("<h1>This is a test</h1>")
 

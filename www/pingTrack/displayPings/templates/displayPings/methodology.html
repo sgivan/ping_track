@@ -1,0 +1,9 @@
+{% extends "displayPings/site0.html" %}
+
+{% block body %}
+
+	<h1>{% block title %}Ping Track Methodology{% endblock %}</h1>
+
+	<p>Every two minutes, we capture the data associated with sending 20 <a href="https://en.wikipedia.org/wiki/Ping_(networking_utility)">pings</a> to IP address 8.8.8.8 and monitoring the responses. The plots represent the proportion of failures during the 20 pings.</p>
+
+{% endblock %}

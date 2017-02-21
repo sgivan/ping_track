@@ -1,8 +1,24 @@
+body {
+	font-family: sans;
+	background: white;
+}
+
 h1 {
     color: black;
+}
+
+h3 {
+	color: black;
 }
 
 #plotbox {
 	border: 1px solid silver;
 	padding: 5px;
+	padding-top: 1px;
+	margin-bottom: 2px;
+}
+
+#plotbox > h3 {
+	color: rgb(100,100,100);
+	padding-top: 0px;
 }
