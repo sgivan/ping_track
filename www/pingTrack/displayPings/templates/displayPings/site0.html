@@ -1,0 +1,18 @@
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'displayPings/style.css' %}" />
+
+<head>
+    <title>
+        {% block title %}{% endblock %}
+    </title>
+</head>
+
+<body>
+    {% block body %}{% endblock %}
+</body>
+
+<footer>
+    <p>&copy; 2017 <a href="http://github.com/sgivan">Scott A. Givan</a></p>
+</footer>
+

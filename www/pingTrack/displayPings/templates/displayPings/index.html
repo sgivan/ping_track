@@ -1,16 +1,16 @@
-{% load staticfiles %}
+{% extends "displayPings/site0.html" %}
 
-<link rel="stylesheet" type="text/css" href="{% static 'displayPings/style.css' %}" />
+{% block body %}
 
-<h1>Latest Ping Track Images</h1>
+<h1>{% block title %}Latest Ping Track Images{% endblock %}</h1>
 
 <p>As of {{ current_date }} CST (USA)</p>
 
 {% load staticfiles %}
 
-<div style="display: flex; flex-direction: row; color: silver; width: 1200px; flex-wrap: wrap;">
+<div style="display: flex; flex-direction: row; width: 1220px; flex-wrap: wrap;">
 
-    <div>
+    <div id="plotbox" style="border: 1px solid silver; padding: 5px;">
         <h3>Failures during the Last Hour</h3>
 
         <a href="{% static 'displayPings/Rplot001.png' %}"><img style="height: 300px;" src="{% static "displayPings/Rplot001.png" %}" alt="ping track data for the last hour" /></a>
@@ -36,3 +36,4 @@
     </div>
 </div>
 
+{% endblock %}
