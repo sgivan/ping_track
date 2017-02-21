@@ -8,32 +8,32 @@
 
 {% load staticfiles %}
 
-<div style="display: flex; flex-direction: row; width: 1220px; flex-wrap: wrap;">
+<div style="display: flex; flex-direction: row; width: 1240px; flex-wrap: wrap;">
 
-    <div id="plotbox" style="border: 1px solid silver; padding: 5px;">
-        <h3>Failures during the Last Hour</h3>
+	<div id="plotbox">
+		<h3>Failures during the Last Hour</h3>
 
-        <a href="{% static 'displayPings/Rplot001.png' %}"><img style="height: 300px;" src="{% static "displayPings/Rplot001.png" %}" alt="ping track data for the last hour" /></a>
-    </div>
+		<a href="{% static 'displayPings/Rplot001.png' %}"><img style="height: 300px;" src="{% static "displayPings/Rplot001.png" %}" alt="ping track data for the last hour" /></a>
+	</div>
 
-    <div>
-        <h3>Failures during the Last 24 Hours</h3>
+	<div id="plotbox" style="margin-left: 2px;">
+		<h3>Failures during the Last 24 Hours</h3>
 
-        <a href="{% static 'displayPings/Rplot002.png' %}"><img style="height: 300px;" src="{% static "displayPings/Rplot002.png" %}" alt="ping track data for the last 24 hours" /></a>
-    </div>
+		<a href="{% static 'displayPings/Rplot002.png' %}"><img style="height: 300px;" src="{% static "displayPings/Rplot002.png" %}" alt="ping track data for the last 24 hours" /></a>
+	</div>
 
 
-    <div>
-        <h3>Failures during the Last Week</h3>
+	<div id="plotbox">
+		<h3>Failures during the Last Week</h3>
 
-        <a href="{% static 'displayPings/Rplot003.png' %}"><img style="height: 300px;" src="{% static "displayPings/Rplot003.png" %}" alt="ping track data for the last week" /></a>
-    </div>
+		<a href="{% static 'displayPings/Rplot003.png' %}"><img style="height: 300px;" src="{% static "displayPings/Rplot003.png" %}" alt="ping track data for the last week" /></a>
+	</div>
 
-    <div>
-        <h3>Failures during the Last Month</h3>
+	<div id="plotbox" style="margin-left: 2px;">
+		<h3>Failures during the Last Month</h3>
 
-        <a href="{% static 'displayPings/Rplot004.png' %}"><img style="height: 300px;" src="{% static "displayPings/Rplot004.png" %}" alt="ping track data for the last month" /></a>
-    </div>
+		<a href="{% static 'displayPings/Rplot004.png' %}"><img style="height: 300px;" src="{% static "displayPings/Rplot004.png" %}" alt="ping track data for the last month" /></a>
+	</div>
 </div>
 
 {% endblock %}
