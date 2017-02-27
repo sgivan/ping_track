@@ -2,6 +2,7 @@
 
 # script to make scatterplots of ping_track data.
 data <- read.delim(file="../bin/stats.txt",stringsAsFactors=F,header=T)
+wdir <- getwd()
 
 to_date <- function(x) {
 ldate <- strptime(x,format="%Y-%m-%dT%H:%M:%S")
@@ -61,30 +62,35 @@ plot(
      ylim=c(0,1),
      )
 #dev.off()
+graphics.off()
 #
 # copy files to www app
 #
 cpfile <- function(filename) {
 	print(filename)
-    destdir <- "../www/pingTrack/displayPings/static/"
+    #destdir <- "../www/pingTrack/displayPings/static/"
+    destdir <- "../www/pingTrack/static/displayPings"
 	if (file.exists(filename)) {
-		cat("'", filename, "' exists\n")	
-		newfilename = paste0(destdir, filename)
-		print(paste0("new file name: '", newfilename, "'"))
+		#cat("'", filename, "' exists\n")	
+		newfilename = paste0(destdir, "/", filename)
+		#print(paste0("new file name: '", newfilename, "'"))
         if (file.exists(newfilename)) {
             file.remove(newfilename)
         }
         #rtn <- file.copy(filename,newfilename,overwrite=TRUE,copy.date=TRUE)
         rtn <- file.copy(filename,newfilename)
         #rtn <- file.symlink(newfilename,filename)
-        print(paste0("return value: '", rtn, "'"))
+        #print(paste0("return value: '", rtn, "'"))
 	}
 }
 
 # instead of copying files, symlink them
+# /mnt/home/sgivan/projects/ping_track/www/pingTrack/static/displayPings
+
 symlinkfile <- function(filename) {
     #print(filename)
-    destdir <- "../www/pingTrack/displayPings/static/displayPings/"
+    #destdir <- "../www/pingTrack/displayPings/static/displayPings/"
+    destdir <- "../www/pingTrack/static/displayPings"
 	if (file.exists(filename)) {
 		#cat("'", filename, "' exists\n")	
         setwd(destdir)
@@ -92,13 +98,15 @@ symlinkfile <- function(filename) {
             #file.remove(filename)
             unlink(filename)
         }
-        file.symlink(paste0("../../../../../R/",filename),filename)
-        setwd("../../../../../R")
+        #file.symlink(paste0("../../../../../R/",filename),filename)
+        file.symlink(paste0(wdir,"/",filename),filename)
+        #setwd("../../../../../R")
+        setwd(wdir)
     }
 }
 
 pngfiles <- c('Rplot001.png', 'Rplot002.png', 'Rplot003.png', 'Rplot004.png')
 
-#rtn <- lapply(pngfiles, cpfile)
-rtn <- lapply(pngfiles, symlinkfile)
+rtn <- lapply(pngfiles, cpfile)
+#rtn <- lapply(pngfiles, symlinkfile)
 
