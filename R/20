@@ -292,3 +292,22 @@ which convert
 man convert
 man ImageMagick
 display Rplot00*.png
+cd ~/projects/ping_track/
+git status
+cd bin
+ll
+cd ..
+ll
+cd R
+ll
+vim make_scatterplot.R 
+ll
+date
+ll
+crontab -e
+ll
+date
+ll
+ls -la
+ll ~/var/log/scatterplot.log 
+ll
