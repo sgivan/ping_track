@@ -67,7 +67,7 @@ graphics.off()
 # copy files to www app
 #
 cpfile <- function(filename) {
-	print(filename)
+	#print(filename)
     #destdir <- "../www/pingTrack/displayPings/static/"
     destdir <- "../www/pingTrack/static/displayPings"
 	if (file.exists(filename)) {
