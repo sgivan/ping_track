@@ -98,6 +98,10 @@ sub help {
 
 say <<HELP;
 
+    --quiet
+    --debug
+    --verbose
+    --help
 
 HELP
 
