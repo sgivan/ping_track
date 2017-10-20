@@ -14,11 +14,36 @@ dates <- lapply(data[1],to_date)
 
 png(filename="Rplot%03d.png",width=1440,heigh=720)
 par(lab=c(10,5,7));
+pnts=29
 # plot last hour
 plot(
-     main="Failures in Last Hour",
-     dates[[1]][(length(dates[[1]])-29):length(dates[[1]])],
-     data['Fail'][[1]][(length(dates[[1]])-29):length(dates[[1]])]/20,
+     main="Failures in 2 Hours",
+     dates[[1]][(length(dates[[1]])-pnts):length(dates[[1]])],
+     data['Fail'][[1]][(length(dates[[1]])-pnts):length(dates[[1]])]/20,
+     col="blue",
+     type="p",
+     xlab="Minutes",
+     ylab="Failures/Attempts",
+     ylim=c(0,1),
+     )
+# plot failures in last 4 hours 
+pnts=58
+plot(
+     main="Failures in 4 Hours",
+     dates[[1]][(length(dates[[1]])-pnts):length(dates[[1]])],
+     data['Fail'][[1]][(length(dates[[1]])-pnts):length(dates[[1]])]/20,
+     col="blue",
+     type="p",
+     xlab="Minutes",
+     ylab="Failures/Attempts",
+     ylim=c(0,1),
+     )
+# plot failures in last 8 hours 
+pnts=116
+plot(
+     main="Failures in 8 Hours",
+     dates[[1]][(length(dates[[1]])-pnts):length(dates[[1]])],
+     data['Fail'][[1]][(length(dates[[1]])-pnts):length(dates[[1]])]/20,
      col="blue",
      type="p",
      xlab="Minutes",
@@ -26,11 +51,12 @@ plot(
      ylim=c(0,1),
      )
 ## plot last 24 hours
+pnts=720
 par(lab=c(10,5,7));
 plot(
      main="Failures in Last 24 Hours",
-     dates[[1]][(length(dates[[1]])-720):length(dates[[1]])],
-     data['Fail'][[1]][(length(dates[[1]])-720):length(dates[[1]])]/20,
+     dates[[1]][(length(dates[[1]])-pnts):length(dates[[1]])],
+     data['Fail'][[1]][(length(dates[[1]])-pnts):length(dates[[1]])]/20,
      col="blue",
      type="p",
      xlab="Hour",
@@ -38,11 +64,12 @@ plot(
      ylim=c(0,1),
      )
 # plot last week
+pnts=5040
 par(lab=c(10,5,7));
 plot(
      main="Failures in Last Week",
-     dates[[1]][(length(dates[[1]])-5040):length(dates[[1]])],
-     data['Fail'][[1]][(length(dates[[1]])-5040):length(dates[[1]])]/20,
+     dates[[1]][(length(dates[[1]])-pnts):length(dates[[1]])],
+     data['Fail'][[1]][(length(dates[[1]])-pnts):length(dates[[1]])]/20,
      col="blue",
      type="p",
      xlab="Day",
@@ -50,11 +77,12 @@ plot(
      ylim=c(0,1),
      )
 # plot last month
+pnts=21600
 par(lab=c(10,5,7));
 plot(
      main="Failures in Last Month",
-     dates[[1]][(length(dates[[1]])-21600):length(dates[[1]])],
-     data['Fail'][[1]][(length(dates[[1]])-21600):length(dates[[1]])]/20,
+     dates[[1]][(length(dates[[1]])-pnts):length(dates[[1]])],
+     data['Fail'][[1]][(length(dates[[1]])-pnts):length(dates[[1]])]/20,
      col="blue",
      type="p",
      xlab="Day",
