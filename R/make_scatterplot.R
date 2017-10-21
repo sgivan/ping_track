@@ -16,6 +16,8 @@ png(filename="Rplot%03d.png",width=1440,heigh=720)
 par(lab=c(10,5,7));
 pnts=29
 # plot last hour
+#png(filename=paste0("pingTrack_",pnts,".png"),width=1440,heigh=720)
+#par(lab=c(10,5,7));
 plot(
      main="Failures in 2 Hours",
      dates[[1]][(length(dates[[1]])-pnts):length(dates[[1]])],
@@ -26,8 +28,10 @@ plot(
      ylab="Failures/Attempts",
      ylim=c(0,1),
      )
+
 # plot failures in last 4 hours 
 pnts=58
+#png(filename=paste0("pingTrack_",pnts,".png"),width=1440,heigh=720)
 plot(
      main="Failures in 4 Hours",
      dates[[1]][(length(dates[[1]])-pnts):length(dates[[1]])],
@@ -40,6 +44,7 @@ plot(
      )
 # plot failures in last 8 hours 
 pnts=116
+#png(filename=paste0("pingTrack_",pnts,".png"),width=1440,heigh=720)
 plot(
      main="Failures in 8 Hours",
      dates[[1]][(length(dates[[1]])-pnts):length(dates[[1]])],
@@ -52,6 +57,7 @@ plot(
      )
 ## plot last 24 hours
 pnts=720
+#png(filename=paste0("pingTrack_",pnts,".png"),width=1440,heigh=720)
 par(lab=c(10,5,7));
 plot(
      main="Failures in Last 24 Hours",
@@ -65,6 +71,7 @@ plot(
      )
 # plot last week
 pnts=5040
+#png(filename=paste0("pingTrack_",pnts,".png"),width=1440,heigh=720)
 par(lab=c(10,5,7));
 plot(
      main="Failures in Last Week",
@@ -78,6 +85,7 @@ plot(
      )
 # plot last month
 pnts=21600
+#png(filename=paste0("pingTrack_",pnts,".png"),width=1440,heigh=720)
 par(lab=c(10,5,7));
 plot(
      main="Failures in Last Month",
