@@ -25,7 +25,7 @@ SECRET_KEY = 's%rpk=hre&o0r64pm1)2i7a7)p5aeec&g0oda+a&rn2(d4qa+n'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', u'genomeogenesis.com']
+ALLOWED_HOSTS = ['localhost', u'genomeogenesis.com', u'10.0.0.27']
 
 
 # Application definition
