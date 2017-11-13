@@ -10,6 +10,7 @@ make_STplot <- function (x,filename="st3") {
     with(x, plot(c(1:length(Download))*15/60,Download/1e6,ylim=range(c(Upload,Download))/1e6, type="l", col="red3", mar=c(2,5,2,5), xlab="Hours", ylab=NA))
     par(new=T)
     with(x, plot(c(1:length(Upload))*15/60,Upload/1e6,ylim=range(c(Upload,Download))/1e6, type="l", col="blue3", xlab=NA, ylab=NA, axes=F))
+    mtext(side=3, paste0("Network Speed Test (",date(),")"))
     mtext(side=2, line=3, "MBytes")
     par(new=T)
     with(x,plot(c(1:length(Ping)),Ping,ylim=range(Ping), type="l", col="green3", xlab=NA, ylab=NA, axes=F))
