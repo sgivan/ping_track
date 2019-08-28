@@ -141,7 +141,7 @@ symlinkfile <- function(filename) {
     }
 }
 
-pngfiles <- c('Rplot001.png', 'Rplot002.png', 'Rplot003.png', 'Rplot004.png')
+pngfiles <- c('Rplot001.png', 'Rplot002.png', 'Rplot003.png', 'Rplot004.png', 'Rplot005.png', 'Rplot006.png')
 
 rtn <- lapply(pngfiles, cpfile)
 #rtn <- lapply(pngfiles, symlinkfile)
