@@ -4,14 +4,14 @@
 
 <h1>{% block title %}Latest Ping Track Images{% endblock %}</h1>
 
-<p>As of {{ current_date }} CST (USA)</p>
+<p>As of {{ current_date }} EST (USA)</p>
 
 {% load staticfiles %}
 
 <div style="display: flex; flex-direction: row; width: 1240px; flex-wrap: wrap;">
 
 	<div id="plotbox">
-		<h3>Failures during the Last Hour</h3>
+		<h3>Failures during the Last 2 Hours</h3>
 
 		<a href="{% static 'displayPings/Rplot001.png' %}"><img style="height: 300px;" src="{% static "displayPings/Rplot001.png" %}" alt="ping track data for the last hour" /></a>
 	</div>

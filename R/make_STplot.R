@@ -6,7 +6,7 @@ data <- read.csv(file="speedtest.txt", header=T, stringsAsFactors=F)
 # 168 hrs = 7 days
 # 336 hrs = 14 days
 # 720 hrs = 30 days
-timepts <- c(4,8,12,18,24,48,72,168,336,720)
+timepts <- c(4,8,12,18,24,48,72,168,336,720,2160,4320,8640)
 
 make_STplot <- function (x,filename="st3") {
     png(filename=paste0("plots/pingTrack_",filename,".png"),width=1440,heigh=720)
