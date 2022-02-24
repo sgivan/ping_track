@@ -1,0 +1,107 @@
+{% extends "displayPings/site0.html" %}
+
+{% block body %}
+
+<h1>{% block title %}Latest Speedtest Images{% endblock %}</h1>
+
+<p>As of {{ current_date }} EST (USA)</p>
+
+{% load static %}
+
+<div style="display: flex; flex-direction: row; width: 1240px; flex-wrap: wrap;">
+
+	<div id="plotbox">
+		<h3>Speedtests during the Last 4 Hours</h3>
+		<a href="{% static 'displayPings/pingTrack_ST4hrs.png' %}"><img style="height: 300px;" src="{% static "displayPings/pingTrack_ST4hrs.png" %}" alt="speedtest  data for the last 4 hours" /></a>
+	</div>
+	<div id="plotbox" style="margin-left: 2px;">
+		<h3>Speedtests during the Last 8 Hours</h3>
+
+		<a href="{% static 'displayPings/pingTrack_ST8hrs.png' %}"><img style="height: 300px;" src="{% static "displayPings/pingTrack_ST8hrs.png" %}" alt="speedtest  data for the last 8 hours" /></a>
+	</div>
+
+	<div id="plotbox">
+		<h3>Speedtests during the Last 12 Hours</h3>
+		<a href="{% static 'displayPings/pingTrack_ST12hrs.png' %}">
+            <img style="height: 300px;" src="{% static "displayPings/pingTrack_ST12hrs.png" %}" alt="speedtest  data for the last 12 hours" />
+        </a>
+	</div>
+	<div id="plotbox" style="margin-left: 2px;">
+		<h3>Speedtests during the Last 18 Hours</h3>
+
+		<a href="{% static 'displayPings/pingTrack_ST18hrs.png' %}">
+            <img style="height: 300px;" src="{% static "displayPings/pingTrack_ST18hrs.png" %}" alt="speedtest  data for the last 18 hours" />
+        </a>
+	</div>
+
+	<div id="plotbox">
+		<h3>Speedtests during the Last 24 Hours</h3>
+		<a href="{% static 'displayPings/pingTrack_ST24hrs.png' %}">
+            <img style="height: 300px;" src="{% static "displayPings/pingTrack_ST24hrs.png" %}" alt="speedtest  data for the last 24 hours" />
+        </a>
+	</div>
+	<div id="plotbox" style="margin-left: 2px;">
+		<h3>Speedtests during the Last 48 Hours</h3>
+
+		<a href="{% static 'displayPings/pingTrack_ST48hrs.png' %}">
+            <img style="height: 300px;" src="{% static "displayPings/pingTrack_ST48hrs.png" %}" alt="speedtest  data for the last 48 hours" />
+        </a>
+	</div>
+
+	<div id="plotbox">
+		<h3>Speedtests during the Last 72 Hours</h3>
+		<a href="{% static 'displayPings/pingTrack_ST72hrs.png' %}">
+            <img style="height: 300px;" src="{% static "displayPings/pingTrack_ST72hrs.png" %}" alt="speedtest  data for the last 72 hours" />
+        </a>
+	</div>
+	<div id="plotbox" style="margin-left: 2px;">
+		<h3>Speedtests during the Last 168 Hours</h3>
+		<a href="{% static 'displayPings/pingTrack_ST168hrs.png' %}">
+            <img style="height: 300px;" src="{% static "displayPings/pingTrack_ST168hrs.png" %}" alt="speedtest  data for the last 168 hours" />
+        </a>
+	</div>
+
+	<div id="plotbox">
+		<h3>Speedtests during the Last 336 Hours</h3>
+		<a href="{% static 'displayPings/pingTrack_ST336hrs.png' %}">
+            <img style="height: 300px;" src="{% static "displayPings/pingTrack_ST336hrs.png" %}" alt="speedtest  data for the last 336 hours" />
+        </a>
+	</div>
+	<div id="plotbox" style="margin-left: 2px;">
+		<h3>Speedtests during the Last 720 Hours</h3>
+		<a href="{% static 'displayPings/pingTrack_ST720hrs.png' %}">
+            <img style="height: 300px;" src="{% static "displayPings/pingTrack_ST720hrs.png" %}" alt="speedtest  data for the last 720 hours" />
+        </a>
+	</div>
+
+	<div id="plotbox">
+		<h3>Speedtests during the Last 2160 Hours</h3>
+		<a href="{% static 'displayPings/pingTrack_ST2160hrs.png' %}">
+            <img style="height: 300px;" src="{% static "displayPings/pingTrack_ST2160hrs.png" %}" alt="speedtest  data for the last 2160 hours" />
+        </a>
+	</div>
+	<div id="plotbox" style="margin-left: 2px;">
+		<h3>Speedtests during the Last 4320 Hours</h3>
+		<a href="{% static 'displayPings/pingTrack_ST4320hrs.png' %}">
+            <img style="height: 300px;" src="{% static "displayPings/pingTrack_ST4320hrs.png" %}" alt="speedtest  data for the last 4320 hours" />
+        </a>
+	</div>
+
+	<div id="plotbox">
+		<h3>Speedtests during the Last 8760 Hours</h3>
+		<a href="{% static 'displayPings/pingTrack_ST8760hrs.png' %}">
+            <img style="height: 300px;" src="{% static "displayPings/pingTrack_ST8760hrs.png" %}" alt="speedtest  data for the last 8760 hours" />
+        </a>
+	</div>
+	<div id="plotbox" style="margin-left: 2px;">
+		<h3>Speedtests during the Last 17520 Hours</h3>
+		<a href="{% static 'displayPings/pingTrack_ST17520hrs.png' %}">
+            <img style="height: 300px;" src="{% static "displayPings/pingTrack_ST17520hrs.png" %}" alt="speedtest  data for the last 17520 hours" />
+        </a>
+	</div>
+
+</div>
+
+<!-- <p><a href="methodology">methodology</a></p> -->
+
+{% endblock %}

@@ -13,6 +13,13 @@ def index(request):
 #    return HttpResponse(template.render(context,request))
     return render(request, 'displayPings/index.html', context)
 
+def speedtest(request):
+    today_date = timezone.now()
+    template = loader.get_template('displayPings/st.html')
+    context = { 'current_date' : today_date }
+#    return HttpResponse(template.render(context,request))
+    return render(request, 'displayPings/st.html', context)
+
 def methodology(request):
     return render(request, 'displayPings/methodology.html')
 
