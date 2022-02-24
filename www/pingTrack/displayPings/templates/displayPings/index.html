@@ -6,6 +6,10 @@
 
 <p>As of {{ current_date }} EST (USA)</p>
 
+<p>
+These images display basic internet connectivity. For data related to connection speeds, see the <a href="{% url 'speedtest' %}">Speedtest plots</a>.
+</p>
+
 {% load static %}
 
 <div style="display: flex; flex-direction: row; width: 1240px; flex-wrap: wrap;">
@@ -46,6 +50,6 @@
 	</div>
 </div>
 
-<p><a href="methodology">methodology</a></p>
+<p><a href="{% url 'methodology' %}">methodology</a></p>
 
 {% endblock %}
